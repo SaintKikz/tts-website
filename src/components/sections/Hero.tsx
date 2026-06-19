@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { Fragment, useRef } from "react";
 import {
   motion,
   useScroll,
@@ -76,9 +76,9 @@ export function Hero() {
           lines={[
             "Des solutions fiables",
             "pour les secteurs minier,",
-            <>
+            <Fragment key="hero-title-line-3">
               logistique &amp; <Accent>industriel</Accent>.
-            </>,
+            </Fragment>,
           ]}
           stagger={0.14}
         />
