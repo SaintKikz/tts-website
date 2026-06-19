@@ -80,7 +80,7 @@ function PlaceholderMesh({ missing }: { missing?: boolean }) {
     <group ref={group}>
       <mesh ref={ref} position={[0, -0.2, 0]} castShadow>
         <boxGeometry args={[3, 1.1, 1.4]} />
-        <meshStandardMaterial color="#C9A86A" metalness={0.4} roughness={0.35} />
+        <meshStandardMaterial color="#0284C7" metalness={0.4} roughness={0.35} />
       </mesh>
       {missing && (
         <Html center position={[0, 1.6, 0]}>

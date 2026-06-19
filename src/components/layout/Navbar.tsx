@@ -104,7 +104,7 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="block rounded-lg px-2 py-3 text-base text-foreground/85 transition-colors hover:bg-white/5 hover:text-foreground"
+                    className="block rounded-lg px-2 py-3 text-base text-foreground/85 transition-colors hover:bg-foreground/5 hover:text-foreground"
                   >
                     {item.label}
                   </Link>

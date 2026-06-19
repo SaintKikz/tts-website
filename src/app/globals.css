@@ -8,14 +8,17 @@
    apply opacity via rgb(var(--token) / <alpha-value>).
    ============================================================ */
 :root {
-  --background: 10 11 13; /* #0A0B0D deep black */
-  --surface: 18 20 25; /* #121419 anthracite */
-  --surface-2: 26 29 36; /* #1A1D24 elevated anthracite */
-  --foreground: 245 245 244; /* near white */
-  --muted: 156 163 175; /* gray-400 */
-  --sand: 201 168 106; /* #C9A86A warm gold/sand — primary accent */
-  --petrol: 16 110 102; /* #106E66 petrol/teal — secondary accent */
-  --energy: 220 38 38; /* #DC2626 — rare energy/industry highlight */
+  /* Light theme — corporate blue & white identity.
+     NOTE: the accent token is still named "--sand" / "sand" (Tailwind key) for
+     historical reasons, but it now holds the brand BLUE. */
+  --background: 248 250 252; /* #F8FAFC very light (page) */
+  --surface: 255 255 255; /* #FFFFFF cards/surfaces */
+  --surface-2: 241 245 249; /* #F1F5F9 elevated / alt surface */
+  --foreground: 15 23 42; /* #0F172A slate-900 — main text (navy) */
+  --muted: 71 85 105; /* #475569 slate-600 — secondary text */
+  --sand: 2 132 199; /* #0284C7 — BRAND BLUE (primary accent) */
+  --petrol: 7 89 133; /* #075985 — deep blue (secondary accent) */
+  --energy: 220 38 38; /* #DC2626 — rare alert/energy highlight */
 }
 
 @layer base {
@@ -85,7 +88,7 @@
 
   /* Gradient text used on key words in headings */
   .text-gradient-sand {
-    @apply bg-gradient-to-br from-sand via-[#e6cf9e] to-sand bg-clip-text text-transparent;
+    @apply bg-gradient-to-br from-sand via-[#38bdf8] to-sand bg-clip-text text-transparent;
   }
 }
 

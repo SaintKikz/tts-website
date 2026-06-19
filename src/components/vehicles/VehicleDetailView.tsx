@@ -81,7 +81,7 @@ export function VehicleDetailView({ vehicle }: { vehicle: Vehicle }) {
               {vehicle.recommendedFor.map((r) => (
                 <span
                   key={r}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-line bg-white/[0.03] px-3 py-1.5 text-xs text-foreground/80"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-line bg-foreground/[0.03] px-3 py-1.5 text-xs text-foreground/80"
                 >
                   <Check className="h-3 w-3 text-sand" />
                   {r}
@@ -117,7 +117,7 @@ export function VehicleDetailView({ vehicle }: { vehicle: Vehicle }) {
             </div>
           </div>
 
-          <p className="mt-6 rounded-xl border border-line bg-white/[0.02] px-4 py-3 text-xs leading-relaxed text-muted">
+          <p className="mt-6 rounded-xl border border-line bg-foreground/[0.02] px-4 py-3 text-xs leading-relaxed text-muted">
             Les caractéristiques finales dépendent de la version, de l’année et de la disponibilité.
             Données fournies à titre indicatif — prix et fiche technique sur demande.
           </p>

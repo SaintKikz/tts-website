@@ -44,7 +44,7 @@ export function Activities() {
             <motion.article
               key={activity.id}
               variants={reduce ? undefined : fadeUp}
-              className="group relative flex flex-col overflow-hidden rounded-3xl border border-line bg-surface/60 transition-colors duration-300 hover:border-white/15"
+              className="group relative flex flex-col overflow-hidden rounded-3xl border border-line bg-surface/60 transition-colors duration-300 hover:border-foreground/15"
             >
               <div className="relative">
                 <PlaceholderImage

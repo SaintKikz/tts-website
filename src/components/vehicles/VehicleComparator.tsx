@@ -54,7 +54,7 @@ export function VehicleComparator({ open, vehicles, onClose, onRemove }: Props) 
           aria-modal="true"
           aria-label="Comparateur de véhicules"
         >
-          <div className="fixed inset-0 bg-background/85 backdrop-blur-sm" onClick={onClose} aria-hidden />
+          <div className="fixed inset-0 bg-foreground/40 backdrop-blur-sm" onClick={onClose} aria-hidden />
 
           <motion.div
             initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
@@ -180,7 +180,7 @@ function RatingMeter({ value }: { value: number }) {
           key={i}
           className={cn(
             "h-1.5 w-5 rounded-full",
-            i < value ? "bg-sand" : "bg-white/10"
+            i < value ? "bg-sand" : "bg-foreground/10"
           )}
         />
       ))}

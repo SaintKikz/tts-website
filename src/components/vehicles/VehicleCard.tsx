@@ -16,9 +16,9 @@ type Props = {
 };
 
 const availabilityStyles: Record<string, string> = {
-  Disponible: "border-[#5fd6c7]/30 bg-[#5fd6c7]/10 text-[#5fd6c7]",
+  Disponible: "border-[#047857]/30 bg-[#047857]/10 text-[#047857]",
   "Sur commande": "border-sand/30 bg-sand/15 text-sand",
-  "À confirmer": "border-line bg-white/5 text-muted",
+  "À confirmer": "border-line bg-foreground/5 text-muted",
 };
 
 export function VehicleCard({
@@ -35,7 +35,7 @@ export function VehicleCard({
       variants={reduce ? undefined : fadeUp}
       className={cn(
         "group relative flex flex-col overflow-hidden rounded-3xl border bg-surface/60 transition-colors duration-300",
-        isComparing ? "border-sand/50" : "border-line hover:border-white/15"
+        isComparing ? "border-sand/50" : "border-line hover:border-foreground/15"
       )}
     >
       {/* Media */}

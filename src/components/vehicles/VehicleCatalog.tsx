@@ -145,13 +145,13 @@ export function VehicleCatalog() {
                     {compare.map((v) => (
                       <span
                         key={v.id}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-line bg-white/[0.03] py-1 pl-3 pr-1.5 text-xs"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-line bg-foreground/[0.03] py-1 pl-3 pr-1.5 text-xs"
                       >
                         {v.name}
                         <button
                           onClick={() => toggleCompare(v)}
                           aria-label={`Retirer ${v.name}`}
-                          className="grid h-5 w-5 place-items-center rounded-full hover:bg-white/10"
+                          className="grid h-5 w-5 place-items-center rounded-full hover:bg-foreground/10"
                         >
                           <X className="h-3 w-3" />
                         </button>

@@ -64,7 +64,7 @@ export function Fleet() {
               {models.map((m) => (
                 <span
                   key={m}
-                  className="rounded-full border border-line bg-white/[0.03] px-3 py-1.5 text-xs text-foreground/80"
+                  className="rounded-full border border-line bg-foreground/[0.03] px-3 py-1.5 text-xs text-foreground/80"
                 >
                   {m}
                 </span>

@@ -16,8 +16,8 @@ const variants: Record<Variant, string> = {
   primary:
     "bg-sand text-background hover:shadow-sand hover:brightness-[1.05] hover:-translate-y-0.5",
   outline:
-    "border border-line bg-white/[0.02] text-foreground backdrop-blur-sm hover:border-sand/60 hover:bg-white/[0.05] hover:-translate-y-0.5",
-  ghost: "text-foreground/80 hover:text-foreground hover:bg-white/[0.05]",
+    "border border-line bg-foreground/[0.02] text-foreground backdrop-blur-sm hover:border-sand/60 hover:bg-foreground/[0.05] hover:-translate-y-0.5",
+  ghost: "text-foreground/80 hover:text-foreground hover:bg-foreground/[0.05]",
   whatsapp: "bg-[#1FAE54] text-white hover:brightness-110 hover:-translate-y-0.5",
 };
 

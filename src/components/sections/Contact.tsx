@@ -316,7 +316,7 @@ function ContactRow({
 }) {
   const inner = (
     <>
-      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-white/[0.02] text-sand">
+      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-line bg-foreground/[0.02] text-sand">
         {icon}
       </span>
       <span>
