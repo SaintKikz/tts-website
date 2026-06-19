@@ -1,4 +1,4 @@
-import type { Variants, Transition } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 /**
  * Centralized motion presets so every animation across the site shares the
@@ -8,8 +8,8 @@ import type { Variants, Transition } from "framer-motion";
  * back to a no-op when the user prefers reduced motion.
  */
 
-export const EASE_OUT: Transition["ease"] = [0.22, 1, 0.36, 1];
-export const EASE_IN_OUT: Transition["ease"] = [0.65, 0, 0.35, 1];
+export const EASE_OUT: [number, number, number, number] = [0.22, 1, 0.36, 1];
+export const EASE_IN_OUT: [number, number, number, number] = [0.65, 0, 0.35, 1];
 
 /** Standard "rise + fade" used by scroll reveals. */
 export const fadeUp: Variants = {

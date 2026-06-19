@@ -13,19 +13,18 @@ type Props = {
   prefix?: string;
   suffix?: string;
   className?: string;
-  durationMs?: number;
 };
 
 /** Animated count-up that fires once when scrolled into view. */
-export function Counter({ to, prefix = "", suffix = "", className, durationMs = 1600 }: Props) {
+export function Counter({ to, prefix = "", suffix = "", className }: Props) {
   const ref = useRef<HTMLSpanElement>(null);
   const reduce = useReducedMotion();
   const inView = useInView(ref, { once: true, amount: 0.6 });
 
   const motionValue = useMotionValue(0);
   const spring = useSpring(motionValue, {
-    duration: durationMs,
-    bounce: 0,
+    stiffness: 55,
+    damping: 18,
   });
 
   useEffect(() => {
