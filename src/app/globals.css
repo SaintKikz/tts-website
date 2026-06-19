@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   TTS Design Tokens
+   Colors are stored as raw "R G B" triplets so Tailwind can
+   apply opacity via rgb(var(--token) / <alpha-value>).
+   ============================================================ */
+:root {
+  --background: 10 11 13; /* #0A0B0D deep black */
+  --surface: 18 20 25; /* #121419 anthracite */
+  --surface-2: 26 29 36; /* #1A1D24 elevated anthracite */
+  --foreground: 245 245 244; /* near white */
+  --muted: 156 163 175; /* gray-400 */
+  --sand: 201 168 106; /* #C9A86A warm gold/sand — primary accent */
+  --petrol: 16 110 102; /* #106E66 petrol/teal — secondary accent */
+  --energy: 220 38 38; /* #DC2626 — rare energy/industry highlight */
+}
+
+@layer base {
+  * {
+    border-color: theme("colors.line");
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+    font-feature-settings: "ss01", "cv01";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: rgb(var(--sand) / 0.85);
+    color: rgb(var(--background));
+  }
+
+  /* Visible, on-brand focus ring for keyboard users */
+  :focus-visible {
+    outline: 2px solid rgb(var(--sand));
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Custom scrollbar (cosmetic, desktop only) */
+  @media (pointer: fine) {
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgb(var(--background));
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgb(var(--surface-2));
+      border-radius: 999px;
+      border: 2px solid rgb(var(--background));
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(var(--sand) / 0.5);
+    }
+  }
+}
+
+@layer components {
+  /* Page section rhythm */
+  .container-tts {
+    @apply mx-auto w-full max-w-container px-5 sm:px-8 lg:px-12;
+  }
+
+  /* Small label/eyebrow above section titles */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.22em] text-sand;
+  }
+
+  /* Subtle hairline divider used across sections */
+  .hairline {
+    @apply h-px w-full bg-line;
+  }
+
+  /* Gradient text used on key words in headings */
+  .text-gradient-sand {
+    @apply bg-gradient-to-br from-sand via-[#e6cf9e] to-sand bg-clip-text text-transparent;
+  }
+}
+
+/* ============================================================
+   Accessibility: honor reduced-motion globally.
+   Framer Motion components also check this via useReducedMotion.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
