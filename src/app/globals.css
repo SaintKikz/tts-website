@@ -8,17 +8,22 @@
    apply opacity via rgb(var(--token) / <alpha-value>).
    ============================================================ */
 :root {
-  /* Light theme — corporate blue & white identity.
-     NOTE: the accent token is still named "--sand" / "sand" (Tailwind key) for
-     historical reasons, but it now holds the brand BLUE. */
-  --background: 248 250 252; /* #F8FAFC very light (page) */
-  --surface: 255 255 255; /* #FFFFFF cards/surfaces */
-  --surface-2: 241 245 249; /* #F1F5F9 elevated / alt surface */
-  --foreground: 15 23 42; /* #0F172A slate-900 — main text (navy) */
-  --muted: 71 85 105; /* #475569 slate-600 — secondary text */
-  --sand: 2 132 199; /* #0284C7 — BRAND BLUE (primary accent) */
-  --petrol: 7 89 133; /* #075985 — deep blue (secondary accent) */
-  --energy: 220 38 38; /* #DC2626 — rare alert/energy highlight */
+  /* TTS OFFICIAL brand palette — light identity (navy + cyan on off-white).
+     The accent token keeps the name "--sand"/"sand" (Tailwind key) for
+     historical reasons but now holds the BRAND CYAN. */
+  --background: 247 250 252; /* #F7FAFC blanc cassé (page) */
+  --surface: 255 255 255; /* #FFFFFF cards */
+  --surface-2: 233 238 242; /* #E9EEF2 alt surface (light metal) */
+  --foreground: 6 26 61; /* #061A3D navy principal — texte/titres */
+  --muted: 92 107 122; /* #5C6B7A gris métal lisible — texte secondaire */
+  --sand: 11 127 168; /* #0B7FA8 cyan de marque (profondeur lisible) */
+  --petrol: 11 45 77; /* #0B2D4D bleu pétrole foncé — accent secondaire */
+  --energy: 220 38 38; /* #DC2626 — alerte rare (erreurs de formulaire) */
+
+  /* Brand references (use directly where the exact tone is needed) */
+  --cyan-bright: 22 168 216; /* #16A8D8 cyan vif — logo & grands accents */
+  --metal: 167 176 183; /* #A7B0B7 gris métal — bordures/dividers */
+  --ink: 2 11 20; /* #020B14 noir bleuté — profondeur */
 }
 
 @layer base {
@@ -88,7 +93,7 @@
 
   /* Gradient text used on key words in headings */
   .text-gradient-sand {
-    @apply bg-gradient-to-br from-sand via-[#38bdf8] to-sand bg-clip-text text-transparent;
+    @apply bg-gradient-to-br from-sand via-[#16A8D8] to-sand bg-clip-text text-transparent;
   }
 }
 

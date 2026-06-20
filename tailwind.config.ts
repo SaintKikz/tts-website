@@ -15,7 +15,7 @@ const config: Config = {
         sand: "rgb(var(--sand) / <alpha-value>)",
         petrol: "rgb(var(--petrol) / <alpha-value>)",
         energy: "rgb(var(--energy) / <alpha-value>)",
-        line: "rgb(15 23 42 / 0.10)",
+        line: "rgb(167 176 183 / 0.55)",
       },
       fontFamily: {
         display: ["var(--font-display)", "system-ui", "sans-serif"],
@@ -28,12 +28,12 @@ const config: Config = {
         tightest: "-0.04em",
       },
       boxShadow: {
-        glow: "0 1px 2px rgb(15 23 42 / 0.06), 0 24px 60px -24px rgb(15 23 42 / 0.18)",
+        glow: "0 1px 2px rgb(6 26 61 / 0.06), 0 24px 60px -24px rgb(6 26 61 / 0.16)",
         sand: "0 18px 50px -18px rgb(var(--sand) / 0.40)",
       },
       backgroundImage: {
         "grid-faint":
-          "linear-gradient(to right, rgb(15 23 42 / 0.04) 1px, transparent 1px), linear-gradient(to bottom, rgb(15 23 42 / 0.04) 1px, transparent 1px)",
+          "linear-gradient(to right, rgb(6 26 61 / 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgb(6 26 61 / 0.05) 1px, transparent 1px)",
         "radial-fade":
           "radial-gradient(60% 60% at 50% 0%, rgb(var(--sand) / 0.12), transparent 70%)",
       },

@@ -42,13 +42,19 @@ export function Navbar() {
       <nav className="container-tts flex h-16 items-center justify-between lg:h-20">
         {/* Wordmark */}
         <Link href="#top" className="group flex items-center gap-3" aria-label={site.legalName}>
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-sand font-display text-sm font-bold text-background">
-            T
+          <span className="grid h-10 w-10 place-items-center rounded-lg border-2 border-[#16A8D8] transition-transform duration-200 group-hover:scale-105">
+            <span className="font-display text-[13px] font-extrabold leading-none tracking-tight">
+              <span className="text-foreground">TT</span>
+              <span className="text-[#16A8D8]">S</span>
+            </span>
           </span>
           <span className="flex flex-col leading-none">
-            <span className="font-display text-lg font-bold tracking-tight">TTS</span>
-            <span className="text-[10px] uppercase tracking-[0.18em] text-muted">
-              Transatlantic Trade &amp; Services
+            <span className="font-display text-base font-bold tracking-tight">
+              <span className="text-foreground">TRANS</span>
+              <span className="text-[#16A8D8]">ATLANTIC</span>
+            </span>
+            <span className="mt-1 text-[9px] uppercase tracking-[0.22em] text-muted">
+              Trade &amp; Services
             </span>
           </span>
         </Link>

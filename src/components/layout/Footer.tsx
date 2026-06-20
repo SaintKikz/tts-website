@@ -20,10 +20,16 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:pr-8">
             <div className="flex items-center gap-3">
-              <span className="grid h-9 w-9 place-items-center rounded-lg bg-sand font-display text-sm font-bold text-background">
-                T
+              <span className="grid h-10 w-10 place-items-center rounded-lg border-2 border-[#16A8D8]">
+                <span className="font-display text-[13px] font-extrabold leading-none tracking-tight">
+                  <span className="text-foreground">TT</span>
+                  <span className="text-[#16A8D8]">S</span>
+                </span>
               </span>
-              <span className="font-display text-lg font-bold tracking-tight">TTS</span>
+              <span className="font-display text-base font-bold tracking-tight">
+                <span className="text-foreground">TRANS</span>
+                <span className="text-[#16A8D8]">ATLANTIC</span>
+              </span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-muted">
               {site.legalName}. Solutions fiables en véhicules, logistique, BTP et équipements
